@@ -7,6 +7,7 @@ public class Spieler {
     private Raum aktuellerRaum;
     private int tragkraft;
     private ArrayList<Gegenstand> gegenstaende;
+    private int foo;
 
     public Spieler() {
         this.gegenstaende=new ArrayList<>();
