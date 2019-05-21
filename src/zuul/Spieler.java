@@ -7,8 +7,9 @@ public class Spieler {
     private Raum aktuellerRaum;
     private int tragkraft;
     private ArrayList<Gegenstand> gegenstaende;
-    private int foo;
-
+    public int energie = 100;
+    boolean raumWechslen = false;
+    
     public Spieler() {
         this.gegenstaende=new ArrayList<>();
         this.tragkraft = 30;
@@ -58,7 +59,12 @@ public class Spieler {
             }
         }
     }
-
+    /**
+     * 
+     * @param name - Gegenstandsname
+     * @return boolean - ob Gegenstand abgelegt wurde
+     * @author seran1 -                           
+     */
     public boolean gegenstandAblegen(String name) {
         for(Gegenstand g: this.gegenstaende) {
             if(g.getName().equalsIgnoreCase(name)) {
@@ -85,6 +91,7 @@ public class Spieler {
 
     public void geheZu(Raum raum) {
         this.aktuellerRaum=raum;
+        raumWechslen = true;
     }
 
     public Raum getAktuellerRaum() {
@@ -108,5 +115,17 @@ public class Spieler {
     public void sleep() {
 
         System.out.println("Ich schlaf dann mal");
+    }
+    
+
+    public int Hunger() {        
+        if(raumWechslen == true) {
+        	energie -= 20;
+        	raumWechslen = false;
+        }
+        if(energie <= 0) {
+        	System.out.println("Du bist gestorben");
+        }
+        return energie;
     }
 }

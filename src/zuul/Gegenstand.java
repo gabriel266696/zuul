@@ -6,6 +6,7 @@ public class Gegenstand {
     private String beschreibung;
     private int gewicht;
     private boolean essbar;
+    private int hunger;
 
     public Gegenstand(String name, String beschreibung, int gewicht) {
         this.beschreibung=beschreibung;
@@ -24,5 +25,8 @@ public class Gegenstand {
 
     public String getName() {
         return this.name;
+    }
+    public int getHunger() {
+        return this.hunger;
     }
 }
