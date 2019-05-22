@@ -1,8 +1,26 @@
 package zuul;
 
-public interface Zustand {
-	Zustand heilen();
-	Zustand leichtVerletzen();
-	Zustand starkVerletzen();
-	Zustand toetlichVerletzen();
+public class Zustand {
+
+	
+	
+	protected void heilen() {
+
+
+		
+	}
+	
+	
+	
+	protected void verletzen() {
+	
+
+	}
+	
+	
+	
+	protected void sterben() {
+		
+
+	}
 }
