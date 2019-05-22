@@ -8,7 +8,7 @@ public class WorldGenerator {
         this.setzeAusgaenge();
         this.addGegenstaende();
     }
-
+ 
     private void raeumeAnlegen() {
         lichtung = new Raum("auf einer Lichtung, umgeben von dunklen Tannen");
         waldstueck = new Raum("im dunklen Wald");

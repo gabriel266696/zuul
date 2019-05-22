@@ -124,7 +124,7 @@ public class Spieler {
         	raumWechslen = false;
         }
         if(energie <= 0) {
-        	System.out.println("Du bist gestorben");
+        	System.out.println("Du bist gestorben ! ");
         }
         return energie;
     }
