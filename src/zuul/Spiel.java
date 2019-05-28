@@ -75,7 +75,7 @@ public class Spiel
             Befehl befehl = parser.liefereBefehl();
             verarbeiteBefehl(befehl);
         }
-        System.out.println("Danke f√ºr dieses Spiel. Auf Wiedersehen.");
+        System.out.println("Danke f¸r dieses Spiel. Auf Wiedersehen.");
     }
 
     /**
@@ -85,7 +85,7 @@ public class Spiel
     {
         System.out.println();
         System.out.println("Willkommen zu Zuul!");
-        System.out.println("Entdecke die Welt von Zuul. Doch Vorsicht, √ºberall lauern Gefahren!");
+        System.out.println("Entdecke die Welt von Zuul. Doch Vorsicht, ‹berall lauern Gefahren!");
         System.out.println("Tippen sie 'help', wenn Sie Hilfe brauchen.");
         System.out.println();
         raumInfoAusgeben();
@@ -94,7 +94,7 @@ public class Spiel
     private void verarbeiteBefehl(Befehl befehl)
     {
         if(befehl.istUnbekannt()) {
-            System.out.println("Ich wei√ü nicht, was Sie meinen...");
+            System.out.println("Ich weiﬂ nicht, was Sie meinen...");
 
         } else {
             String befehlswort = befehl.gibBefehlswort();

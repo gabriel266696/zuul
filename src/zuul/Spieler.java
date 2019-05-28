@@ -8,7 +8,6 @@ public class Spieler {
     private int tragkraft;
     private ArrayList<Gegenstand> gegenstaende;
     public int energie = 100;
-    boolean raumWechslen = false;
     
     public Spieler() {
         this.gegenstaende=new ArrayList<>();
@@ -91,7 +90,8 @@ public class Spieler {
 
     public void geheZu(Raum raum) {
         this.aktuellerRaum=raum;
-        raumWechslen = true;
+        energie -= 20;
+        checkHunger();
     }
 
     public Raum getAktuellerRaum() {
@@ -118,15 +118,10 @@ public class Spieler {
     }
     
 
-    public int Hunger() {        
-        if(raumWechslen == true) {
-        	energie -= 20;
-        	raumWechslen = false;
-        }
+    public void checkHunger() {        
+        
         if(energie <= 0) {
-        	System.exit(0);
-        	System.out.println("Du bist gestorben ! ");
+        	System.out.println("Du bist gestorben");
         }
-        return energie;
     }
 }
