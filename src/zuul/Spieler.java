@@ -120,6 +120,12 @@ public class Spieler {
 
     public void checkHunger() {        
         
+        if(energie >= 50) {
+        	System.out.println("Ich bin Satt");
+        }
+        if(energie <= 50) {
+        	System.out.println("ich bin Hungrig");
+        }
         if(energie <= 0) {
         	System.out.println("Du bist gestorben");
         }
