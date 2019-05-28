@@ -8,6 +8,7 @@ public class Spieler {
     private int tragkraft;
     private ArrayList<Gegenstand> gegenstaende;
     public int energie = 100;
+	
     
     public Spieler() {
         this.gegenstaende=new ArrayList<>();
@@ -123,20 +124,16 @@ public class Spieler {
         if(energie <= 0) {
         	System.out.println("Du bist gestorben");
         }
+        if(energie >= 80) {
+        	System.out.println("Ich bin satt! ");
+        }
+        if(energie <= 50) {
+        	System.out.println("Ich bekomme langsam Hunger!");
+        }
+        if(energie <= 20) {
+        	System.out.println("Ich bin sehr hungrig!");
+        }
     }
     
-// TODO
-    public int Wärme() {
-	if(Temparatur>=18) {
-		System.out.println("Es ist sehr Warm hier drin");
-	
-	}
-    
-	public int Kälte() {
-		if(Temparatur<18) {
-			System.out.println("Es ist etwas Kühl hier");
-	
-		}
-	}
-    }
+
 }
