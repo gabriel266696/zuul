@@ -36,7 +36,7 @@ public class Raum
 		this.beschreibung = beschreibung;
 		this.temperatur = temperatur;
 	}
-
+  
 
 	public void gegenstandAblegen(Gegenstand neuerGegenstand) {
 		this.gegenstaende.add(neuerGegenstand);
@@ -95,7 +95,8 @@ public class Raum
 		// Gegenstand gefunden
 		return null;
 	}
-
+// jede gradzahl hat eine eigene beschreibung.
+	
 	public void gibTemperaturAus() {
 		this.Wärme();
 		this.Kälte();

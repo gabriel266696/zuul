@@ -8,7 +8,8 @@ public class WorldGenerator {
         this.setzeAusgaenge();
         this.addGegenstaende();
     }
- 
+ // nach der beschreibung sind die gradzahlen jeweils für einen Raum.
+    
     private void raeumeAnlegen() {
         lichtung = new Raum("auf einer Lichtung, umgeben von dunklen Tannen", 25);
         waldstueck = new Raum("im dunklen Wald",13);
