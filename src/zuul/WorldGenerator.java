@@ -8,18 +8,19 @@ public class WorldGenerator {
         this.setzeAusgaenge();
         this.addGegenstaende();
     }
- 
+ // nach der beschreibung sind die gradzahlen jeweils für einen Raum.
+    
     private void raeumeAnlegen() {
-        lichtung = new Raum("auf einer Lichtung, umgeben von dunklen Tannen");
-        waldstueck = new Raum("im dunklen Wald");
-        taverne = new Raum("in der Taverne, mit zwielichten Gestalten an der Theke");
-        hexenhaus = new Raum("im Hexenhaus");
-        dorfplatz = new Raum("auf dem Dorfplatz");
-        piratenHoehle = new Raum("in einer alten Piratenhöhle");
-        kellerDerTaverne = new Raum("im Keller der Taverne");
-        geheimgang = new Raum("in einem schmalen modrigen Geheimgang");
-        taverneErsterStock=new Raum("bei den den Gästezimmern im ersten Stock der Taverne");
-        Imbiss = new Raum("in einem Imbiss");
+        lichtung = new Raum("auf einer Lichtung, umgeben von dunklen Tannen", 25);
+        waldstueck = new Raum("im dunklen Wald",13);
+        taverne = new Raum("in der Taverne, mit zwielichten Gestalten an der Theke",19);
+        hexenhaus = new Raum("im Hexenhaus",6);
+        dorfplatz = new Raum("auf dem Dorfplatz",12);
+        piratenHoehle = new Raum("in einer alten Piratenhöhle",24);
+        kellerDerTaverne = new Raum("im Keller der Taverne",3);
+        geheimgang = new Raum("in einem schmalen modrigen Geheimgang",31);
+        taverneErsterStock=new Raum("bei den den Gästezimmern im ersten Stock der Taverne",23);
+        Imbiss = new Raum("in einem Imbiss",19);
     }
 
     private void setzeAusgaenge() {

@@ -44,11 +44,12 @@ public class Spiel
         this.commands.put("help", new HelpCommand(this.parser));
         this.commands.put("look", new LookCommand(this.spieler));
         this.commands.put("status", new StatusCommand(this.spieler));
-        this.commands.put("take", new TakeCommand(this.spieler));
         this.commands.put("drop", new DropCommand(this.spieler));
         this.commands.put("eat", new EatCommand(this.spieler));
         this.commands.put("quit", new QuitCommand(this));
         this.commands.put("sleep", new SleepCommand(this.spieler));
+        this.commands.put("temperatur", new TemperaturCommand(this.spieler));
+    
     }
 
     private void raeumeAnlegen()
@@ -69,7 +70,7 @@ public class Spiel
         willkommenstextAusgeben();
 
         // Die Hauptschleife. Hier lesen wir wiederholt Befehle ein
-        // und fÃ¼hren sie aus, bis das Spiel beendet wird.
+        // und führen sie aus, bis das Spiel beendet wird.
 
         while (! beendet) {
             Befehl befehl = parser.liefereBefehl();
@@ -87,6 +88,7 @@ public class Spiel
         System.out.println("Willkommen zu Zuul!");
         System.out.println("Entdecke die Welt von Zuul. Doch Vorsicht, Überall lauern Gefahren!");
         System.out.println("Tippen sie 'help', wenn Sie Hilfe brauchen.");
+        System.out.println("geben sie 'Temperatur' ein um die gradzahl heraus zu finden ");
         System.out.println();
         raumInfoAusgeben();
     }

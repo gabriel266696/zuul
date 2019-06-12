@@ -4,7 +4,7 @@ public class Essen extends Gegenstand{
 
     private int bonus;
 
-    public Essen(String name, String beschreibung, int gewicht, int bonus) {
+    public Essen(String name, String beschreibung, int gewicht, int temparatur) {
 
         super(name, beschreibung, gewicht);
         this.bonus=bonus;
