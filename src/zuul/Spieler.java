@@ -8,6 +8,7 @@ public class Spieler {
     private int tragkraft;
     private ArrayList<Gegenstand> gegenstaende;
     public int energie = 100;
+    public Spiel spiel;
     
     public Spieler() {
         this.gegenstaende=new ArrayList<>();
@@ -128,6 +129,7 @@ public class Spieler {
         }
         if(energie <= 0) {
         	System.out.println("Du bist gestorben");
+        	spiel.quit();
         }
     }
 }
